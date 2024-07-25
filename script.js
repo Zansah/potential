@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Add click event listeners to header titles
     const headerTitles = document.querySelectorAll('.header-title');
     
     headerTitles.forEach(title => {
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Set the active state based on the current page
     setActiveHeaderTitle();
 });
 
@@ -32,7 +30,6 @@ function setActiveHeaderTitle(activeTitle) {
         if (activeTitle) {
             title.classList.toggle('active', title === activeTitle);
         } else {
-            // Check the URL path to set the active title
             const path = window.location.pathname;
             const page = path.substring(path.lastIndexOf('/') + 1).replace('.html', '');
             title.classList.toggle('active', title.id === page);
@@ -101,12 +98,19 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(currentSlide + 1);
     }, slideInterval);
 
-    // Optional: Opening and closing the sliding page
     document.getElementById("close-button").addEventListener("click", () => {
         document.getElementById("main-sliding-page").style.display = "none";
     });
 
     document.getElementById("main-sliding-page").style.display = "block";
+});
+
+document.getElementById('search-button').addEventListener('click', function() {
+    document.getElementById('second-sliding-page').classList.add('active');
+});
+
+document.getElementById('second-close-button').addEventListener('click', function() {
+    document.getElementById('second-sliding-page').classList.remove('active');
 });
 
 
