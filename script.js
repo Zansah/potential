@@ -113,6 +113,23 @@ document.getElementById('second-close-button').addEventListener('click', functio
     document.getElementById('second-sliding-page').classList.remove('active');
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const circles = document.querySelectorAll('.circle');
+    const postPage = document.getElementById('post-page');
+
+    circles.forEach(circle => {
+        circle.addEventListener('click', function() {
+            const contentUrl = this.getAttribute('data-content');
+
+            fetch(contentUrl)
+                .then(response => response.text())
+                .then(data => {
+                    postPage.innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        });
+    });
+});
 
 
 
