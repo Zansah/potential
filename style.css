@@ -297,12 +297,93 @@ header{
     margin-top: 400px;
 }
 
+/* mobile version about me */
+.the-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.post-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.circle-wrapper{
+    width: 87px;
+    height: 87px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.circle:hover {
+    background-color: #ccc;
+}
 
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin-right: 10px;
+}
 
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+}
 
+.post-page {
+    height: 300px;
+}
+
+.post-content {
+    display: none;
+}
+
+.post-content.active {
+    display: block;
+}
+
+/* chang 468 later */
+@media screen  and (max-width: 768px) {
+    .post-container {
+        display: block;
+    }
+}
 
 
 
