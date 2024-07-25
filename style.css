@@ -448,6 +448,7 @@ header{
     padding: 16px;
     box-sizing: border-box;
     display: flex;
+    background-color: rgb(226, 226, 226);
 }
 
 .grid-container::-webkit-scrollbar {
@@ -457,6 +458,7 @@ header{
 .card-container {
     display: inline-flex;
     gap: 16px;
+    
 }
 
 .card {
