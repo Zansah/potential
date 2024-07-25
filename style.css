@@ -77,6 +77,93 @@ header{
     
 }
 
+.second-search-bar {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(245, 245, 245, 0.776);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10; 
+    width: calc(100% - 40px); 
+}
+
+.second-search-bar input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.second-search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color:rgba(245, 245, 245, 0.684);
+    cursor: pointer;
+    width: 90%;
+    height: 42px;
+    display: flex;
+    
+}
+.search-bar-container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: -30px;
+}
+
+.second-search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.second-earch-bar-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar-container .second-close-button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 0 5px 5px 0;
+    background-color: #ddd;
+    cursor: pointer;
+}   
+
+.second-sliding-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    overflow-y: auto; 
+    z-index: 100;
+}
+
+.second-sliding-page.active {
+    transform: translateX(0);
+}
+
 .main-sliding-page-content {
     padding: 0px;
     
