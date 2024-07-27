@@ -134,4 +134,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const logoBox = document.querySelector('.logo-box');
+    const slidingPage = document.getElementById('third-sliding-page');
+    const closeButton = document.getElementById('third-close-button');
+
+    logoBox.addEventListener('click', function() {
+        slidingPage.classList.add('active');
+    });
+
+    closeButton.addEventListener('click', function() {
+        slidingPage.classList.remove('active');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!slidingPage.contains(event.target) && !logoBox.contains(event.target)) {
+            slidingPage.classList.remove('active');
+        }
+    });
+});
+
 
