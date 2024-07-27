@@ -492,6 +492,7 @@ section {
 .Outer-four-central-box {
     margin: 15px;
     border-radius: 10px;
+    
 }
 .four-central-box {
     background-color: whitesmoke;
@@ -500,6 +501,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 10px;
+    display: none;
 }
 .four-header {
     font-size: 24px;
@@ -509,7 +511,7 @@ section {
 .four-boxes-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 .four-box-container {
     text-align: center;
@@ -517,7 +519,7 @@ section {
 }
 .four-box {
     border: 1px solid #ccc;
-    height: 120px;
+    height: 100px;
     border-radius: 10px;
     overflow: hidden; 
     position: relative;
@@ -532,6 +534,13 @@ section {
     margin-top: 10px;
     display: flex;
     justify-content: start;
+}
+
+@media screen and (max-width: 767px) {
+    .four-central-box{
+        display: block;
+    }
+    
 }
 
 
