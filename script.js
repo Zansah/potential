@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const logoBox = document.querySelector('.logo-box');
+    const logoBox = document.querySelector('.fa-bars');
     const slidingPage = document.getElementById('third-sliding-page');
     const closeButton = document.getElementById('third-close-button');
 
