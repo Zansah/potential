@@ -741,9 +741,73 @@ section {
     font-weight: 900;
     font-style: italic;
   }
+
+  /* Genre header */
+
+  .header-container {
+    width: 100%;
+    background-color: #fff;
+    text-align: start;
+    font-family: "Roboto";
+    font-weight: 500px;
+    border-top: solid 1px rgb(227, 227, 227);
+    margin-top: 30px;
+  }
+  .discover{
+    font-family: "Roboto";
+    color: black;
+    font-weight: normal;
+    font-weight: 300px;
+    font-size: 20px;
+
+  } 
+.gray-box{
+    width: 100%;
+    background-color: #c2c2c2;
+    height: 60px;
+}
+
+  .genre-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    margin-left: 20px ;
+    margin-top: 45px;
+    font-weight: 600px;
+  }
   
+  .genre-name {
+    display: inline-block;
+    font-size: 1.2em;
+    color: black;
+    margin-right: 40px;
+    cursor: pointer;
+    font-family: "Roboto";
+    font-size: 17px;
+  }
+  
+  .genre-scroll-container::-webkit-scrollbar {
+    display: none; 
+  }
+.season-projects{
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: solid 1px rgb(227, 227, 227);
+    border-top: solid 1px rgb(227, 227, 227);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
 
-
+.season-projects p{
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600px;
+    margin-left: 20px;
+}
 /* Genre Tabs */
 
 .genre-tab-container {
@@ -768,6 +832,7 @@ section {
     white-space: nowrap;
     color: black;
     margin-top: 10px;
+    font-family: 'Roboto';
   }
 
   .genre-tab-container::-webkit-scrollbar {
