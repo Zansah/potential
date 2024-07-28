@@ -548,7 +548,7 @@ section {
 .giant-contain{
     width: 100%;
     background-color: whitesmoke;
-    height: 600px;
+    height: 550px;
 }
 
 .giant-card-container {
@@ -567,7 +567,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    height: 450px;
+    height: 400px;
     margin-top: 60px;
   }
 
