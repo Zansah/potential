@@ -155,3 +155,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function toggleTab(tabId) {
+    var content = document.getElementById(tabId);
+    var isActive = content.classList.contains('active');
+
+    var contents = document.getElementsByClassName('tab-content');
+    var buttons = document.getElementsByClassName('tab-button');
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('active');
+        buttons[i].classList.remove('active');
+    }
+
+    if (!isActive) {
+        content.classList.add('active');
+        document.querySelector(`.tab-button[onclick="toggleTab('${tabId}')"]`).classList.add('active');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cardContainer = document.querySelector('.giant-card-container');
+    const dots = document.querySelectorAll('.giant-card-dot');
+  
+    cardContainer.addEventListener('scroll', () => {
+      const cardWidth = cardContainer.offsetWidth * 0.8 + 20; 
+      const scrollPosition = cardContainer.scrollLeft;
+      const activeIndex = Math.round(scrollPosition / cardWidth);
+  
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === activeIndex);
+      });
+    });
+  
+    // Initial activation
+    const initialCardWidth = cardContainer.offsetWidth * 0.8 + 20;
+    const initialIndex = Math.round(cardContainer.scrollLeft / initialCardWidth);
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === initialIndex);
+    });
+  });
+  
+
+  
+
+
+
+
+
+
