@@ -545,6 +545,12 @@ section {
 
 /* Giant card */
 
+.giant-contain{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 600px;
+}
+
 .giant-card-container {
     display: flex;
     overflow-x: scroll;
@@ -561,7 +567,8 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    height: 400px;
+    height: 450px;
+    margin-top: 60px;
   }
 
   .giant-dots-container {
