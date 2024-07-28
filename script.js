@@ -186,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // Initial activation
     const initialCardWidth = cardContainer.offsetWidth * 0.8 + 20;
     const initialIndex = Math.round(cardContainer.scrollLeft / initialCardWidth);
     dots.forEach((dot, index) => {
