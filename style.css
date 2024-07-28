@@ -16,11 +16,21 @@ header{
 
 }
 
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
 .fa-bars {
     color: black;
     display: none;
     cursor: pointer;
     margin-right: 15px;
+    margin-left: 20px;
 }
 
 .fa-magnifying-glass{
@@ -40,8 +50,6 @@ header{
     border: solid 1px black;
     transition: background-color 0.3s;
     margin-left: auto;
-    position: relative;
-    left: 220px;
 }
 
 .fa-magnifying-glass:hover{
@@ -59,7 +67,6 @@ header{
 @media (max-width: 1000px) {
     .fa-bars {
         display: block;
-        margin-left: auto;
     } 
 
 }
