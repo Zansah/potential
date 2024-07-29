@@ -193,11 +193,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+  document.addEventListener('DOMContentLoaded', () => {
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
 
-  
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+        if (scrollTop === 0) {
+            header.style.top = '0';
+        } else if (scrollTop > lastScrollTop) {
+            header.style.top = '-70px'; 
+        } else {
+            header.style.top = '0';
+        }
 
+        lastScrollTop = scrollTop;
+    });
+});
 
-
-
-
+// New Giant Card display
