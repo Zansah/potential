@@ -2,6 +2,7 @@ body{
     background-color: white;
     margin: 0px;
     overflow-x: hidden;
+
     
 }
 
@@ -12,9 +13,20 @@ header{
     display: flex;
     align-items: center;
     border: solid 1px #eaeaea;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: top 0.3s;
+    z-index: 1000;
 
 }
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 .icon-container {
     display: flex;
@@ -545,10 +557,64 @@ section {
 
 /* Giant card */
 
-.giant-contain{
+.giant-contain {
     width: 100%;
     background-color: white;
-    height: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-header {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.more-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.more-button:hover {
+    background-color: #0056b3;
+}
+
+.sub-header-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover, .filter-button.active {
+    background-color: #007bff;
+    color: white;
 }
 
 .giant-card-container {
@@ -556,11 +622,10 @@ section {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    margin-left: 14px;
-  }
-  
-  .giant-card {
-    min-width: 80%;
+}
+
+.giant-card {
+    flex: 0 0 80%;
     margin-right: 20px;
     scroll-snap-align: start;
     background-color: gray;
@@ -568,32 +633,36 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     height: 400px;
-    margin-top: 60px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+}
 
-  .giant-dots-container {
+.giant-dots-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    margin-right: 70px;
-  }
-  
-  .giant-card-dot {
+}
+
+.giant-card-dot {
     height: 10px;
     width: 10px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-  }
-  
-  .giant-card-dot.active {
-    background-color: #717171;
-  }
-
-  .giant-card-container::-webkit-scrollbar {
-    display: none; 
 }
+
+.giant-card-dot.active {
+    background-color: #717171;
+}
+
+.giant-card-container::-webkit-scrollbar {
+    display: none;
+}
+
 
 /* Genre Boxes */
 
@@ -750,23 +819,34 @@ section {
     background-color: #fff;
     text-align: start;
     font-family: "Roboto";
-    font-weight: 500px;
-    border-top: solid 1px rgb(227, 227, 227);
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+
   }
-  .discover{
-    font-family: "Roboto";
+  .collection{
+    font-family: "Anton";
     color: black;
     font-weight: normal;
-    font-weight: 300px;
-    font-size: 20px;
-
+    font-weight: bolder;
+    font-size: 36px;
+    text-align: center;
   } 
-.gray-box{
-    width: 100%;
-    background-color: #c2c2c2;
-    height: 60px;
-}
+
+
+  .discover-button{
+    height: 40px;
+    width: 130px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+  }
+
 
   .genre-scroll-container {
     display: flex;
