@@ -120,7 +120,8 @@ header{
     transition: left 0.3s ease;
     z-index: 999; 
     /* padding: 20px;  */
-    overflow-y: auto; 
+    overflow: hidden; 
+    /* changes overflow-y:auto; */
 }
 
 .third-sliding-page.active {
