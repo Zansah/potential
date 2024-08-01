@@ -1105,7 +1105,8 @@ section {
     object-fit: cover;
 }
 .drop-discover {
-    position: absolute;
+    position: fixed;
+    /* changed from absolute to fixed */
     bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
@@ -1121,7 +1122,7 @@ section {
   }
 
 .black-block {
-    position: absolute;
+    position: fixed;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1142,7 +1143,7 @@ section {
 }
 
 .big-text {
-    position: absolute;
+    position: fixed;
     top: 35%;
     left: 50%;
     transform: translateX(-50%) scale(2);
@@ -1173,7 +1174,7 @@ section {
 }
 
 .long-text {
-    position: absolute;
+    position: fixed;
     top: 43.5%; 
     left: 5%;
     font-size: 20px;
@@ -1265,11 +1266,11 @@ section {
     border-top: solid 1px rgb(224, 224, 224);
     padding-top: 20px;
 
-}
+  }
 
   .last li{
     list-style: none;
-}
+  }
 
 /* .underline {
     display: inline-block;
