@@ -125,6 +125,12 @@ section {
     margin-left: 20px;
 }
 
+.center-phone-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .phone-container {
     position: relative;
     width: 320px;
