@@ -342,7 +342,7 @@ section {
 .underline::after {
     content: '';
     position: absolute;
-    left: 24vw; 
+    left: 22vw; 
     top: 21vh; 
     width: 90px; 
     height: 3px; 
