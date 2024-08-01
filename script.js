@@ -156,21 +156,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function toggleTab(tabId) {
-    var content = document.getElementById(tabId);
-    var isActive = content.classList.contains('active');
+    var tabs = document.querySelectorAll('.tab-content');
+    var buttons = document.querySelectorAll('.tab-button');
 
-    var contents = document.getElementsByClassName('tab-content');
-    var buttons = document.getElementsByClassName('tab-button');
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].classList.remove('active');
-        buttons[i].classList.remove('active');
-    }
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+    });
 
-    if (!isActive) {
-        content.classList.add('active');
-        document.querySelector(`.tab-button[onclick="toggleTab('${tabId}')"]`).classList.add('active');
+    buttons.forEach(function(button) {
+        button.style.display = 'flex';
+    });
+
+    if (tabId) {
+        document.getElementById(tabId).classList.add('active');
+        document.querySelector(`.tab-button[onclick="toggleTab('${tabId}')"]`).style.display = 'none';
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.querySelector('.giant-card-container');
@@ -213,3 +215,46 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // New Giant Card display
+
+function toggleBox() {
+    const slideBox = document.getElementById('slideBox');
+    if (slideBox.style.maxHeight) {
+      slideBox.style.maxHeight = null;
+    } else {
+      slideBox.style.maxHeight = slideBox.scrollHeight + "px";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const discoverElement = document.getElementById("discover");
+    setTimeout(() => {
+      discoverElement.style.opacity = '1';
+      discoverElement.style.transform = 'translateX(-50%) translateY(0)';
+    }, 1000); 
+  
+    setInterval(() => {
+      if (discoverElement.style.opacity === '1') {
+        discoverElement.style.opacity = '0';
+        discoverElement.style.transform = 'translateX(-50%) translateY(20px)';
+      } else {
+        discoverElement.style.opacity = '1';
+        discoverElement.style.transform = 'translateX(-50%) translateY(0)';
+      }
+    }, 3000);
+  
+    const blackBlockElement = document.getElementById("blackBlock");
+    setTimeout(() => {
+      blackBlockElement.style.opacity = '1';
+    }, 500); 
+  
+    const bigTextElement = document.getElementById("bigText");
+    setTimeout(() => {
+      bigTextElement.style.opacity = '1';
+      bigTextElement.style.animationPlayState = 'running';
+    }, 200); 
+  });
+  
+  
+  
+  
+  
