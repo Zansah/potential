@@ -98,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(currentSlide + 1);
     }, slideInterval);
 
-    document.getElementById("close-button").addEventListener("click", () => {
-        document.getElementById("main-sliding-page").style.display = "none";
+    document.getElementById('close-text').addEventListener('click', function() {
+        document.getElementById('main-sliding-page').classList.add('hidden');
     });
 
     document.getElementById("main-sliding-page").style.display = "block";
@@ -254,7 +254,8 @@ function toggleBox() {
     }, 200); 
   });
   
-  
+
+
   
   
   
