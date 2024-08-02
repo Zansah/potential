@@ -342,8 +342,8 @@ section {
 .underline::after {
     content: '';
     position: absolute;
-    left: 17vw; 
-    top: 19vh; 
+    left: 20vw; 
+    top: 22vh; 
     width: 90px; 
     height: 3px; 
     background-color: black;
