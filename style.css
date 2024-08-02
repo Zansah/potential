@@ -226,7 +226,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 100%;
+    width: 90%;
     position: relative;
     top: -30px;
 }
@@ -289,9 +289,29 @@ section {
     pointer-events: auto;
 }
 
+.main-sliding-page.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 .main-sliding-page-content {
     padding: 0px;
     
+}
+
+.close-text-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-text {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .close-btn {
@@ -675,14 +695,14 @@ section {
     overflow: hidden;
   }
   
-  .holder-genre-box {
+.holder-genre-box {
     position: relative;
     width: 100%;
     height: 450px;
     overflow: hidden;
   }
   
-  .background-image {
+.background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -692,7 +712,7 @@ section {
     z-index: 1;
   }
   
-  .genre-box {
+.genre-box {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -704,29 +724,29 @@ section {
     z-index: 2;
   }
   
-  .genre-content {
+.genre-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: white;
   }
   
-  .genre-title, .category-title {
+.genre-title, .category-title {
     margin: 0;
   }
   
-  .genre-title {
+.genre-title {
     font-size: .8em;
     font-family: "Roboto";
   }
   
-  .category-title {
+.category-title {
     margin-top: 10px;
     font-size: 1.2em;
     font-family: "Roboto";
   }
   
-  .more-button {
+.more-button {
     background-color: #ffffff;
     color: black;
     border: none;
@@ -738,77 +758,77 @@ section {
     font-size: 16px;
   }
   
-  .more-button:hover {
+.more-button:hover {
     background-color: #0056b3;
   }
 
-  .roboto-thin {
+.roboto-thin {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     font-style: normal;
   }
   
-  .roboto-light {
+.roboto-light {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
   
-  .roboto-regular {
+.roboto-regular {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   
-  .roboto-medium {
+.roboto-medium {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
   }
   
-  .roboto-bold {
+.roboto-bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
   
-  .roboto-black {
+.roboto-black {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: normal;
   }
   
-  .roboto-thin-italic {
+.roboto-thin-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     font-style: italic;
   }
   
-  .roboto-light-italic {
+.roboto-light-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: italic;
   }
   
-  .roboto-regular-italic {
+.roboto-regular-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: italic;
   }
   
-  .roboto-medium-italic {
+.roboto-medium-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: italic;
   }
   
-  .roboto-bold-italic {
+.roboto-bold-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: italic;
   }
   
-  .roboto-black-italic {
+.roboto-black-italic {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -816,7 +836,7 @@ section {
 
   /* Genre header */
 
-  .header-container {
+.header-container {
     width: 100%;
     background-color: #fff;
     text-align: start;
@@ -828,7 +848,7 @@ section {
     height: 300px;
 
   }
-  .collection{
+.collection{
     font-family: "Anton";
     color: black;
     font-weight: normal;
@@ -837,22 +857,28 @@ section {
     text-align: center;
   } 
 
-  .header-container p{
+.header-container p{
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  .discover-button{
+.discover-button{
     height: 40px;
     width: 130px;
     border-radius: 5px;
     border: none;
     background-color: black;
     color: white;
+
   }
 
+.discover-button a{
+    text-decoration: none;
+    color: white;
+}
 
-  .genre-scroll-container {
+
+.genre-scroll-container {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
@@ -863,7 +889,7 @@ section {
     font-weight: 600px;
   }
   
-  .genre-name {
+.genre-name {
     display: inline-block;
     font-size: 1.2em;
     color: black;
@@ -873,7 +899,7 @@ section {
     font-size: 17px;
   }
   
-  .genre-scroll-container::-webkit-scrollbar {
+.genre-scroll-container::-webkit-scrollbar {
     display: none; 
   }
 .season-projects{
@@ -903,7 +929,7 @@ section {
     margin-left: 14px;
   }
   
-  .genre-tab{
+.genre-tab{
     flex: 0 0 auto;
     min-width: 20%;
     margin-right: 20px;
@@ -920,7 +946,7 @@ section {
     font-family: 'Roboto';
   }
 
-  .genre-tab-container::-webkit-scrollbar {
+.genre-tab-container::-webkit-scrollbar {
     display: none; 
 }
 
@@ -1122,7 +1148,7 @@ section {
   }
 
 .black-block {
-    position: fixed;
+    position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1143,7 +1169,7 @@ section {
 }
 
 .big-text {
-    position: fixed;
+    position: absolute;
     top: 35%;
     left: 50%;
     transform: translateX(-50%) scale(2);
@@ -1174,7 +1200,7 @@ section {
 }
 
 .long-text {
-    position: fixed;
+    position: absolute;
     top: 43.5%; 
     left: 5%;
     font-size: 20px;
@@ -1289,4 +1315,5 @@ section {
     background-color: rgb(222, 221, 221);
     transform: translateX(-50%);
   } */
+  
   
