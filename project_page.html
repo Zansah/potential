@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    
+
+    body {
+        background-color: #f8f8f8;
+        padding: 20px;
+    }
+
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 100px;
+        border: none;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    /* Filters Section */
+    .filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .filters input,
+    .filters select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex: 1;
+    }
+
+    /* Project Grid */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    /* Project Card */
+    .project-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+    .project-card p {
+        margin: 5px 10px;
+        color: #555;
+        text-decoration: none;
+    }
+
+
+
+    .project-card:hover {
+    transform: translateY(-5px);
+    }
+
+
+</style>
+
+
+
+<body>
+
+    <header style="height: 100px; border-bottom: solid 1px rgb(219, 219, 219);" >
+        <!-- <i class="fa-solid fa-bars fa-2x" id="menu-toggle"></i> -->
+        <img class="main-icon" src="v1-image/header-logo.jpg" alt="">
+        <div class="header-titles">
+            <div class="header-title"><span>Home</span></div>
+
+            
+        </div>
+
+x
+        
+
+        <div class="third-sliding-page" id="third-sliding-page">
+            <button class="third-close-button" id="third-close-button"><i class="fa-solid fa-x" style="position: absolute;
+                top: 10px;
+                right: -20px;
+                background: none;
+                border: none;
+                font-size: 20px;
+                color: #333;
+                cursor: pointer;
+                z-index: 1001;" id="closeSearch"></i>
+                </button>
+            
+                <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT ME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+
+                    <!-- <a href="mailto:znansah@wm.edu"></a><i class="fa-regular fa-envelope"></i> Email</li>
+                    <li><a href="https://www.instagram.com/uncle_ansah/"></a><i class="fa-brands fa-instagram"></i> Instragram</li>
+                    <li><a href="https://www.linkedin.com/in/zephaniah-ansah-78b62b27a/"></a><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+                    <li><a href="https://github.com/Zansah"></a><i class="fa-brands fa-github"></i> Github</li> -->
+                </ul>
+
+            </div>
+        </div>
+            
+        </div>
+
+        
+        <div icon-container></div>
+            <div class="circle-around-mag-glass" id="searchIcon">
+                <i class="fa-solid fa-magnifying-glass" id="menu-toggle"></i>
+            </div>
+
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
+    
+
+
+
+        <div class="search-body">
+            <div id="searchHeader" class="search-header hidden">
+                <div class="search-bar-container">
+                    <input type="text" id="searchBar" placeholder="Search...">
+                    <i class="fa-solid fa-x" id="closeSearch"></i>
+                </div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+
+    </header>
+  
+  <div class="container">
+
+    
+    
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search your courses..." />
+      <select id="termFilter">
+        <option value="">All Terms</option>
+        <option value="Summer 2024">Summer 2024</option>
+        <option value="Spring 2024">Spring 2024</option>
+      </select>
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Game Dev">Game Dev</option>
+        <option value="Algorithms">Algorithms</option>
+        <option value="Notes">Notes</option>
+      </select>
+    </div>
+
+    <div id="courseGrid" class="project-grid">
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-1.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Web Development</p>
+            <h3>Mini Calendar</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-2.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >General</p>
+            <h3>Book Management</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-3.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >General</p>
+            <h3>Password Generator</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-4.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Algorithms</p>
+            <h3>Merge Sort</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-5.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Algorithms</p>
+            <h3>Palindrome</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-6.jpg" alt="Course Image">
+            <p style="font-size: 13px;">Game Development</p>
+            <h3>Hangman</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-7.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Game Development</p>
+            <h3>Guessing Game</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-8.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Game Development</p>
+            <h3>Math Quiz</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-9.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Game Development</p>
+            <h3>Pig Game</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-10.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Game Development</p>
+            <h3>Swordman battle game</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-11.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >General</p>
+            <h3>Alarm</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-12.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >General</p>
+            <h3>Emoji Converter</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+
+      <a href="https://zansah.github.io/Mini-Calendar/">
+        <div class="project-card" data-term="Summer 2024" data-category="Notes">
+            <img src="v1-image/summer24-13.jpg" alt="Course Image">
+            <p style="font-size: 13px;" >Algorithms</p>
+            <h3>Delimter</h3>
+            <p>Notes</p>
+            <p style="margin-bottom: 20px;">Summer 2024</p>
+        </div>
+      </a>
+    
+
+      
+      
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('search');
+  const termFilter = document.getElementById('termFilter');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const courseGrid = document.getElementById('courseGrid');
+  const courses = Array.from(document.querySelectorAll('.project-card'));
+
+  function filterCourses() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedTerm = termFilter.value;
+    const selectedCategory = categoryFilter.value;
+
+    courses.forEach(course => {
+      const title = course.querySelector('h3').innerText.toLowerCase();
+      const term = course.getAttribute('data-term');
+      const category = course.getAttribute('data-category');
+
+      if (
+        title.includes(searchTerm) &&
+        (selectedTerm === '' || term === selectedTerm) &&
+        (selectedCategory === '' || category === selectedCategory)
+      ) {
+        course.style.display = 'block';
+      } else {
+        course.style.display = 'none';
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', filterCourses);
+  termFilter.addEventListener('change', filterCourses);
+  categoryFilter.addEventListener('change', filterCourses);
+});
+
+</script>
+
