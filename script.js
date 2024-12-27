@@ -303,6 +303,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }, slideInterval);
 });
 
+document.querySelectorAll('.holder-genre-box').forEach((box) => {
+    box.addEventListener('click', () => navigateToCategory(box));
+  });
+  
+document.querySelectorAll('.more-button').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation(); 
+      navigateToCategory(button.closest('.holder-genre-box')); 
+    });
+  });
+  
+  function navigateToCategory(box) {
+    const category = box.querySelector('.category-title').textContent.trim();
+    const url = new URL('project_page.html', window.location.origin); 
+    url.searchParams.set('category', category);
+    window.location.href = url.toString(); 
+  }
+  
 
+  
   
   
